@@ -27,6 +27,8 @@ function performMainSearch() {
     }
 }
 
+
+
 // 初始化页面功能
 function initPage() {
     try {
@@ -83,15 +85,11 @@ function initPage() {
                 window.open(targetUrl, '_blank');
             });
         });
-    } catch (error) {
+        
+   } catch (error) {
         console.error('初始化页面出错:', error);
     }
 }
-
-// 页面加载完成后初始化
-window.addEventListener('DOMContentLoaded', () => {
-    initPage();
-});
 
 // 平滑滚动
 if (document.querySelectorAll('a[href^="#"]').length > 0) {
@@ -107,3 +105,8 @@ if (document.querySelectorAll('a[href^="#"]').length > 0) {
         });
     });
 }
+
+// 页面加载完成后初始化
+window.addEventListener('DOMContentLoaded', () => {
+    initPage();
+});
